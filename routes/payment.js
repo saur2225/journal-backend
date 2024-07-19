@@ -25,7 +25,12 @@ router.post("/orders", async (req, res) => {
             receipt: "receipt_order_74394",
         };
 
+        console.log("options", order);
+
+
         const order = await instance.orders.create(options);
+
+        console.log("order", order);
 
         if (!order) return res.status(500).send("Some error occurred");
 
