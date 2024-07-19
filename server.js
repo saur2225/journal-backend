@@ -19,3 +19,6 @@ app.use("/payment", require("./routes/payment"));
 app.use("/payment", require("./routes/payment"));
 
 app.listen(port, () => console.log(`server started on port ${port}`));
+
+console.log("\csdd:", process.env.RAZORPAY_KEY_ID);
+console.log("jhgw:", process.env.RAZORPAY_SECRET);
