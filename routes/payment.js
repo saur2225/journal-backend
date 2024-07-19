@@ -7,6 +7,10 @@ const router = express.Router();
 
 router.post("/orders", async (req, res) => {
     console.log("Received request for /orders");
+
+    console.log("RAZORPAY_KEY_ID:", process.env.RAZORPAY_KEY_ID);
+    console.log("RAZORPAY_SECRET:", process.env.RAZORPAY_SECRET);
+    
     try {
         const { amount, currency } = req.body;
 
