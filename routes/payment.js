@@ -6,6 +6,7 @@ const crypto = require("crypto");
 const router = express.Router();
 
 router.post("/orders", async (req, res) => {
+    console.log("reveived")
     try {
         const { amount } = req.body;
         const { currency } = req.body;
