@@ -6,7 +6,12 @@ var cors = require('cors');
 const port = process.env.PORT || 5000;
 
 // middlewares
-app.use(cors());
+app.use(cors({
+    origin: '*', // replace with your frontend domain
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
+
 app.use(express.json({ extended: false }));
 
 const dbURI = 'mongodb+srv://prajjwal:SzTiVxJDpZQaPY9z@journal-db.lxytsl8.mongodb.net/journal-db?retryWrites=true&w=majority';
