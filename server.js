@@ -9,6 +9,7 @@ const port = process.env.PORT || 5000;
 app.use(cors({
     origin: '*', // replace with your frontend domain
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
     credentials: true
 }));
 
