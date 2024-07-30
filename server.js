@@ -35,6 +35,6 @@ app.use("/newsletter", require("./routes/newsletter"));
 app.use("/save-order", require("./routes/orders"));
 
 
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, '127.0.0.1', () => {
     console.log(`Server is running on port ${port}`);
   });
