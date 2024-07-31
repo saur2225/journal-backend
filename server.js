@@ -5,10 +5,7 @@ var cors = require('cors');
 const port = process.env.PORT || 5000;
 
 // middlewares
-app.use(cors({
-    origin: true,
-    credentials: true
-}));
+app.use(cors());
 
 app.use(express.json({ extended: false }));
 
