@@ -2,14 +2,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 var cors = require('cors');
-var cors = require('cors');
 const port = process.env.PORT || 5000;
 
 // middlewares
 app.use(cors({
-    origin: '*', // replace with your frontend domain
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    origin: true,
     credentials: true
 }));
 
